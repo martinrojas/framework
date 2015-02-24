@@ -1,0 +1,24 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+<appConfig>
+	<xmlFiles>
+		<xmlFile id="copy">config/copy_nUS.xml</xmlFile>
+	</xmlFiles>
+	<timeoutValues>
+		<timeoutValue id="SessionTimeout">120</timeoutValue>
+	</timeoutValues>
+	<serverIPs>
+		<serverIP id="server">192.168.1.16:9998</serverIP>
+	</serverIPs>
+	<modes>
+		<mode id="demo">false</mode>
+	</modes>
+	<logValues>
+		<logValue id="terminalLoggingOn">false</logValue>
+		<logValue id="fileLoggingOn">true</logValue>
+		<logValue id="healthStatusLoggingOn">false</logValue>
+		<logValue id="loggingDebugOn">false</logValue>
+		<logValue id="loggingInfoOn">true</logValue>
+		<logValue id="loggingLowLevelOn">false</logValue>
+		<logValue id="loggingErrorOn">true</logValue>
+	</logValues>
+</appConfig>
