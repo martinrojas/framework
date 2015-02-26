@@ -1,6 +1,6 @@
 package com.custom.ui
 {
-	import com.controllerFramework.control.Controller;
+	import com.framework.control.Controller;
 	import com.greensock.TweenMax;
 	
 	import flash.display.MovieClip;

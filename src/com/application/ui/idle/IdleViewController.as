@@ -58,10 +58,12 @@ package com.application.ui.idle
         {
 			this.dataProvider = dataProvider;
             
-			var my_square:Shape = new Shape();
-			my_square.graphics.beginFill(0xce1326,1);
-			my_square.graphics.drawRect(0,0,dataProvider.stageReference.fullScreenWidth,dataProvider.stageReference.fullScreenHeight);
-			view.addChildAt(my_square, 0);
+//			var my_square:Shape = new Shape();
+//			my_square.graphics.beginFill(0xce1326,1);
+//			my_square.graphics.drawRect(0,0,dataProvider.stageReference.fullScreenWidth,dataProvider.stageReference.fullScreenHeight);
+//			view.addChildAt(my_square, 0);
+			
+			view.idea_txt.text = dataProvider.copy["idleViewTitleIdea"];
 			
 			view.addEventListener(MouseEvent.CLICK, slideClickHandler);
 						
@@ -88,7 +90,6 @@ package com.application.ui.idle
 		
         public function dispose():void
         {
-			var view:IdleView = IdleView(view);
 			
         	if(view.hasEventListener(MouseEvent.CLICK))
         	{

@@ -1,12 +1,11 @@
 package com.application.ui.slide
 {
+	import com.custom.ui.SlideHolder;
 	import com.framework.control.Controller;
-	import com.framework.events.ApplicationControllerEvent;
 	import com.framework.ui.IModel;
 	import com.framework.ui.IViewController;
 	
 	import flash.display.MovieClip;
-	import flash.display.Shape;
 	import flash.events.EventDispatcher;
 	import flash.events.MouseEvent;
 	
@@ -14,7 +13,9 @@ package com.application.ui.slide
 	{
 		private var _dataProvider:SlideModel;
 		
-        private var _view:IdleView;
+        private var _view:SlideView;
+		
+		private var _slider:SlideHolder;
 
 		public function get dataProvider():IModel
         {
@@ -34,7 +35,7 @@ package com.application.ui.slide
         {
             if (_view == null)
             {
-                _view = new IdleView();
+                _view = new SlideView();
             }
             return _view;
         }
@@ -54,13 +55,14 @@ package com.application.ui.slide
         {
 			this.dataProvider = dataProvider;
             
-			var my_square:Shape = new Shape();
-			my_square.graphics.beginFill(0xce1326,1);
-			my_square.graphics.drawRect(0,0,dataProvider.stageReference.fullScreenWidth,dataProvider.stageReference.fullScreenHeight);
-			view.addChildAt(my_square, 0);
+			_slider = new SlideHolder();
+			_slider.x = 0;
+			_slider.y = 0; 
+			view.addChild(_slider);
+			
+			
 			
 			view.addEventListener(MouseEvent.CLICK, slideClickHandler);
-						
         }
         
         
@@ -84,7 +86,6 @@ package com.application.ui.slide
 		
         public function dispose():void
         {
-			var view:IdleView = IdleView(view);
 			
         	if(view.hasEventListener(MouseEvent.CLICK))
         	{

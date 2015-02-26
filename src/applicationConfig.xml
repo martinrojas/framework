@@ -1,7 +1,7 @@
   <?xml version="1.0" encoding="UTF-8"?>
 <appConfig>
 	<xmlFiles>
-		<xmlFile id="copy">config/copy_nUS.xml</xmlFile>
+		<xmlFile id="copy">config/copy_US.xml</xmlFile>
 	</xmlFiles>
 	<timeoutValues>
 		<timeoutValue id="SessionTimeout">120</timeoutValue>

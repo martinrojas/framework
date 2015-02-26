@@ -5,6 +5,7 @@ package com.application.ui.idle
 	import com.framework.ui.AbstractModel;
 	
 	import flash.display.Stage;
+	import flash.utils.Dictionary;
 	
 	public class IdleModel extends AbstractModel
 	{
@@ -33,6 +34,11 @@ package com.application.ui.idle
 		public function get stageReference():Stage
 		{
 			return applicationData.stageReference;
+		}
+		
+		public function get copy():Dictionary
+		{
+			return applicationData.copy;
 		}
 	}
 }

@@ -1,11 +1,11 @@
-package com.controllerFramework.commands
+package com.framework.commands
 {
-	import com.controllerFramework.commands.AbstractCommand;
-	import com.controllerFramework.commands.ICommand;
-	import com.controllerFramework.control.Controller;
-	import com.controllerFramework.data.IApplicationData;
-	import com.controllerFramework.events.ApplicationControllerEvent;
-	import com.controllerFramework.events.ApplicationDataEvent;
+	import com.framework.commands.AbstractCommand;
+	import com.framework.commands.ICommand;
+	import com.framework.control.Controller;
+	import com.framework.data.IApplicationData;
+	import com.framework.events.ApplicationControllerEvent;
+	import com.framework.events.ApplicationDataEvent;
 	import com.custom.external.XmlLoader;
 	
 	import flash.events.*;

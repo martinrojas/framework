@@ -63,14 +63,14 @@ package com.framework.commands
 			Controller.eventDispatcher.dispatchEvent(new ApplicationDataEvent(ApplicationDataEvent.SET_APPLICATION_TIMEOUTS));
 			
 //			TEMP - skiping copy load to idle view state load
-			Controller.eventDispatcher.dispatchEvent(
-				new ApplicationControllerEvent(
-					ApplicationControllerEvent.SET_IDLE_VIEW_STATE));
-			
-			
 //			Controller.eventDispatcher.dispatchEvent(
 //				new ApplicationControllerEvent(
-//					ApplicationControllerEvent.LOAD_COPY_DATA, applicationData.xmlFileURLs[KEY_XML_COPY]));
+//					ApplicationControllerEvent.SET_IDLE_VIEW_STATE));
+			
+			
+			Controller.eventDispatcher.dispatchEvent(
+				new ApplicationControllerEvent(
+					ApplicationControllerEvent.LOAD_COPY_DATA, applicationData.xmlFileURLs[KEY_XML_COPY]));
 			
 			
 		}

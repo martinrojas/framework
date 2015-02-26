@@ -3,6 +3,7 @@ package
 	
 	import com.application.commands.SetIdleViewStateCommand;
 	import com.application.commands.SetSlideViewStateCommand;
+	import com.framework.commands.LoadCopyDataCommand;
 	import com.framework.commands.SetPreviousViewStateCommand;
 	import com.framework.commands.StartupCommand;
 	import com.framework.control.ApplicationController;
@@ -20,7 +21,7 @@ package
 	import flash.events.Event;
 	
 	
-	[SWF(backgroundColor="0xFFFFFF")]
+	[SWF(backgroundColor="0xce1326")]
 	public class airFramework extends Sprite
 	{
 		private var _applicationController:ApplicationController;
@@ -97,7 +98,7 @@ package
 		{
 			_applicationController.registerCommand(ApplicationControllerEvent.STARTUP, StartupCommand);
 			
-			//			_applicationController.registerCommand(ApplicationControllerEvent.LOAD_COPY_DATA, LoadCopyDataCommand);
+			_applicationController.registerCommand(ApplicationControllerEvent.LOAD_COPY_DATA, LoadCopyDataCommand);
 			
 			_applicationController.registerCommand(ApplicationControllerEvent.SET_PREVIOUS_VIEW_STATE, SetPreviousViewStateCommand);
 			

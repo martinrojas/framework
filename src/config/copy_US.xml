@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <copy>
-	<textItem id="demoViewTitleWelcome"><![CDATA[Jessica's Home]]></textItem>
-	<textItem id="demoViewTitleEco"><![CDATA[Eco-Check]]></textItem>
-	<textItem id="demoViewTitleDate"><![CDATA[Date Night]]></textItem>
-	<textItem id="demoViewActivity"><![CDATA[ACTIVITY]]></textItem>
-	<textItem id="demoViewPrograms"><![CDATA[Programs]]></textItem>
-	<textItem id="demoViewProgramDate"><![CDATA[Date Night]]></textItem>
-	<textItem id="demoViewProgramEco"><![CDATA[Eco-Check]]></textItem>
-	<textItem id="demoViewProgramEntry"><![CDATA[Welcome]]></textItem> 
-	<textItem id="demoViewProgramVisitor"><![CDATA[Home Visitor]]></textItem>
-	<textItem id="demoViewProgramNight"><![CDATA[Goodnight]]></textItem>
-	<textItem id="demoViewProgramCreate"><![CDATA[Create  Program]]></textItem>
-	<textItem id="demoViewHomeButton"><![CDATA[home]]></textItem>
-	<textItem id="demoViewLearnButton"><![CDATA[learn more]]></textItem>
+	<textItem id="idleViewTitleIdea"><![CDATA[ideaBook]]></textItem>
 		
 	<textItem id="programViewProgramDate"><![CDATA[Date Night]]></textItem>
 	<textItem id="programViewProgramEco"><![CDATA[Eco-Check]]></textItem>
