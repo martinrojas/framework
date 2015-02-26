@@ -1,4 +1,4 @@
-package com.application.ui.idle
+package com.application.ui.slide
 {
 	import com.framework.data.IApplicationData;
 	import com.framework.events.ApplicationDataEvent;
@@ -6,9 +6,9 @@ package com.application.ui.idle
 	
 	import flash.display.Stage;
 	
-	public class IdleModel extends AbstractModel
+	public class SlideModel extends AbstractModel
 	{
-		public function IdleModel(applicationData:IApplicationData)
+		public function SlideModel(applicationData:IApplicationData)
 		{
 			super(applicationData);
 			
@@ -24,11 +24,6 @@ package com.application.ui.idle
         {
             //applicationData.addEventListener(ApplicationDataEvent.CONFIG_DATA_CHANGE, configDataChangeHandler, false, 0, true);
         }
-		
-		public function get demoMode():Boolean
-		{
-			return applicationData.demoMode;
-		}
 		
 		public function get stageReference():Stage
 		{

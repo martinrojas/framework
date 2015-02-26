@@ -2,6 +2,7 @@ package
 {
 	
 	import com.application.commands.SetIdleViewStateCommand;
+	import com.application.commands.SetSlideViewStateCommand;
 	import com.framework.commands.SetPreviousViewStateCommand;
 	import com.framework.commands.StartupCommand;
 	import com.framework.control.ApplicationController;
@@ -41,8 +42,8 @@ package
 			// support autoOrients
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
-			this.scaleX = 0.5;
-			this.scaleY = 0.5;
+//			this.scaleX = 0.5;
+//			this.scaleY = 0.5;
 			
 			this.addEventListener(Event.ADDED_TO_STAGE, init);
 		}
@@ -65,6 +66,8 @@ package
 			_applicationData = new ApplicationData();
 			_applicationController = new ApplicationController(_applicationData);
 			_interactionManager = new InteractionManager(stage, _applicationData);
+			
+			_applicationData.stageReference = stage;
 			
 			registerCommands();
 			
@@ -100,7 +103,7 @@ package
 			
 			_applicationController.registerCommand(ApplicationControllerEvent.SET_IDLE_VIEW_STATE, SetIdleViewStateCommand);
 			
-			//			_applicationController.registerCommand(ApplicationControllerEvent.SET_DEMO_VIEW_STATE, SetDemoViewStateCommand);
+			_applicationController.registerCommand(ApplicationControllerEvent.SET_SLIDE_VIEW_STATE, SetSlideViewStateCommand);
 			
 			//			_applicationController.registerCommand(ApplicationControllerEvent.SET_MARKETING_VIEW_STATE, SetMarketingViewStateCommand);
 			

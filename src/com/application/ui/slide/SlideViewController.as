@@ -1,11 +1,7 @@
-package com.application.ui.idle
+package com.application.ui.slide
 {
-	import com.custom.ui.ToggleButton;
 	import com.framework.control.Controller;
-	import com.framework.data.ApplicationData;
 	import com.framework.events.ApplicationControllerEvent;
-	import com.framework.events.ApplicationDataEvent;
-	import com.framework.events.UIEvent;
 	import com.framework.ui.IModel;
 	import com.framework.ui.IViewController;
 	
@@ -14,9 +10,9 @@ package com.application.ui.idle
 	import flash.events.EventDispatcher;
 	import flash.events.MouseEvent;
 	
-	public class IdleViewController extends EventDispatcher implements IViewController
+	public class SlideViewController extends EventDispatcher implements IViewController
 	{
-		private var _dataProvider:IdleModel;
+		private var _dataProvider:SlideModel;
 		
         private var _view:IdleView;
 
@@ -29,7 +25,7 @@ package com.application.ui.idle
         {
             if (value != null)
             {
-                _dataProvider = IdleModel(value);
+                _dataProvider = SlideModel(value);
                 updateView();
             }
         }
@@ -43,7 +39,7 @@ package com.application.ui.idle
             return _view;
         }
 		
-		public function IdleViewController($dataProvider:IdleModel = null)
+		public function SlideViewController($dataProvider:SlideModel = null)
 		{
 			super();
             init($dataProvider);
@@ -54,7 +50,7 @@ package com.application.ui.idle
         /***                 INIT                 ***/
         /********************************************/
         
-        private function init(dataProvider:IdleModel):void
+        private function init(dataProvider:SlideModel):void
         {
 			this.dataProvider = dataProvider;
             
@@ -75,9 +71,9 @@ package com.application.ui.idle
 		private function slideClickHandler(e:MouseEvent):void
         {
 			
-				Controller.eventDispatcher.dispatchEvent(
-					new ApplicationControllerEvent(
-						ApplicationControllerEvent.SET_SLIDE_VIEW_STATE));
+//				Controller.eventDispatcher.dispatchEvent(
+//					new ApplicationControllerEvent(
+//						ApplicationControllerEvent.SET_DEMO_VIEW_STATE));
 			
         }
 		
